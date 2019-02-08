@@ -1,344 +1,107 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Tone Generator</title>
-    <link rel=stylesheet href="tonestyle.css">
-    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel=stylesheet>
-    <style>
-    /* The sidebar menu */
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-}
+---
+title: New Beginnings
+date: "2015-05-28T22:40:32.169Z"
+---
 
-/* The navigation menu links */
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-}
+Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+right at the coast of the Semantics, a large language ocean. A small river named
+Duden flows by their place and supplies it with the necessary regelialia.
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+## On deer horse aboard tritely yikes and much
 
-/* Style page content */
-.main {
-  margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
-}
+The Big Oxmox advised her not to do so, because there were thousands of bad
+Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
+didn’t listen. She packed her seven versalia, put her initial into the belt and
+made herself on the way.
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-    #toggle {
-    text-decoration:none;
-    margin:auto;
-    border:0;
-    padding:0;
-    background:none;
-    display:inline-block;
-    width:100%;
-    height:100%;
-    font-family: 'Audiowide';
-    font-size:50px;
-    color:white;
-    outline:none
-}
+* This however showed weasel
+* Well uncritical so misled
+  * this is very interesting
+* Goodness much until that fluid owl
 
-#negrouse {
-    margin:auto;
-    text-align:center;
-    width:250px;
-    height:75px;
-    background-color:#3333ff;
-    outline:none;
-}
-#controls {
-    margin:auto;
-    text-align:center;
-    width:auto;
-    height:auto;
-    padding-top:40px;
-    outline:none;
-    border:none;
-}
-.frequency {
-    text-decoration:none;
-    text-align:center;
-    margin:auto;
-    border:none;
-    padding:0;
-    font-family: 'Audiowide';
-    font-size:20px;
-    outline:none;
-}
-.butt {
-    text-decoration:none;
-    text-align:center;
-    margin:auto;
-    border:none;
-    padding:8px;
-    font-family: 'Audiowide';
-    font-size:12px;
-    color:white;
-    outline:none;
-    background-color:#3333ff;
-    border-radius:4px;
-}
-.adjustments {
-    padding-bottom:30px;
-}
-#curve_chart {
-    margin:auto;
-}
-#freqRange {
-    width:400px;
-}
-#freqRange2 {
-    width:400px;
-}
-#freqRange3 {
-    width:400px;
-}
+When she reached the first hills of the **Italic Mountains**, she had a last
+view back on the skyline of her hometown _Bookmarksgrove_, the headline of
+[Alphabet Village](http://google.com) and the subline of her own road, the Line
+Lane. Pityful a rethoric question ran over her cheek, then she continued her
+way. On her way she met a copy.
 
-</style>
-    
+### Overlaid the jeepers uselessly much excluding
 
+But nothing the copy said could convince her and so it didn’t take long until a
+few insidious Copy Writers ambushed her, made her drunk with
+[Longe and Parole](http://google.com) and dragged her into their agency, where
+they abused her for their projects again and again. And if she hasn’t been
+rewritten, then they are still using her.
 
-      
-<script>
-var context = null;
-var usingWebAudio = true;
-if (typeof AudioContext !== 'undefined') {
-  context = new AudioContext();
-} else if (typeof webkitAudioContext !== 'undefined') {
-  context = new webkitAudioContext();
-} else {
-  usingWebAudio = false;
-}
+> Far far away, behind the word mountains, far from the countries Vokalia and
+> Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+> right at the coast of the Semantics, a large language ocean.
 
-var playing = false;
-var osc = null;
-var freq = 75;
-var STEP_CONSTANT = Math.pow(2.0, 1.0/12.0);
-//second set of variables
-var playing2 = false;
-var osc2 = null;
-var freq2 = 50;
-var STEP_CONSTANT2 = Math.pow(2.0, 1.0/12.0);
-//third set of variables
-var playing3 = false;
-var osc3 = null;
-var freq3 = 25;
-var STEP_CONSTANT3 = Math.pow(2.0, 1.0/12.0);
+It is a paradisematic country, in which roasted parts of sentences fly into your
+mouth. Even the all-powerful Pointing has no control about the blind texts it is
+an almost unorthographic life One day however a small line of blind text by the
+name of Lorem Ipsum decided to leave for the far World of Grammar.
 
+### According a funnily until pre-set or arrogant well cheerful
 
-function toggle() {
-  var button = document.getElementById("toggle");
-  if (playing && osc) {
-    playing = false;
-    osc.stop(0);
-    button.value = "Play";
-  } else {
-    playing = true;
-    osc = context.createOscillator();
-    osc.connect(context.destination);
-    osc.frequency.value = freq;
-    osc.start(0);
-    button.value = "Stop";
-  }
-  if (playing2 && osc2) {
-    playing2 = false;
-    osc2.stop(0);
-    button.value = "Play";
-  } else {
-    playing2 = true;
-    osc2 = context.createOscillator();
-    osc2.connect(context.destination);
-    osc2.frequency.value = freq2;
-    osc2.start(0);
-    button.value = "Stop";
-  }
-    if (playing3 && osc3) {
-    playing3 = false;
-    osc3.stop(0);
-    button.value = "Play";
-  } else {
-    playing3 = true;
-    osc3 = context.createOscillator();
-    osc3.connect(context.destination);
-    osc3.frequency.value = freq3;
-    osc3.start(0);
-    button.value = "Stop";
-  }
-    
-}
+The Big Oxmox advised her not to do so, because there were thousands of bad
+Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
+didn’t listen. She packed her seven versalia, put her initial into the belt and
+made herself on the way.
 
-function updateFreq(newFreq) {
-  freq = newFreq;
-  if (osc) {
-    osc.frequency.value = freq;
-  }
-  var text = document.getElementById("freqText").value = freq;
-  var range = document.getElementById("freqRange").value = freq;
-}
+1.  So baboon this
+2.  Mounted militant weasel gregariously admonishingly straightly hey
+3.  Dear foresaw hungry and much some overhung
+4.  Rash opossum less because less some amid besides yikes jeepers frenetic
+    impassive fruitlessly shut
 
-window.onload = function() {
-  if (!usingWebAudio) {
-    document.getElementById("audioControls").innerHTML = "<p>Web audio required.</p>"
-  }
-    
-}
+When she reached the first hills of the Italic Mountains, she had a last view
+back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
+Village and the subline of her own road, the Line Lane. Pityful a rethoric
+question ran over her cheek, then she continued her way. On her way she met a
+copy.
 
-function updateFreq2(newFreq2) {
-  freq2 = newFreq2;
-  if (osc2) {
-    osc2.frequency.value = freq2;
-  }
-  var text = document.getElementById("freqText2").value = freq2;
-  var range = document.getElementById("freqRange2").value = freq2;
-}
+> The copy warned the Little Blind Text, that where it came from it would have
+> been rewritten a thousand times and everything that was left from its origin
+> would be the word "and" and the Little Blind Text should turn around and
+> return to its own, safe country.
 
-window.onload = function() {
-  if (!usingWebAudio) {
-    document.getElementById("audioControls2").innerHTML = "<p>Web audio required.</p>"
-  }
-    
-}
-function updateFreq3(newFreq3) {
-  freq3 = newFreq3;
-  if (osc3) {
-    osc3.frequency.value = freq3;
-  }
-  var text = document.getElementById("freqText3").value = freq3;
-  var range = document.getElementById("freqRange3").value = freq3;
-}
+But nothing the copy said could convince her and so it didn’t take long until a
+few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
+and dragged her into their agency, where they abused her for their projects
+again and again. And if she hasn’t been rewritten, then they are still using
+her. Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts.
 
-window.onload = function() {
-  if (!usingWebAudio) {
-    document.getElementById("audioControls3").innerHTML = "<p>Web audio required.</p>"
-  }
-    
-}
+#### Silent delightfully including because before one up barring chameleon
 
-</script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-        
-     
-        
-      function drawChart() {
-        var scale = (100*freq);
-        var step = 1;
-        
-        var data = google.visualization.arrayToDataTable([]);
-          data.addColumn('string', '');
-          data.addColumn('number', 'Tone 1');
-          data.addColumn('number', 'Tone 2');
-          data.addColumn('number', 'Tone 3');
-          data.addColumn('number', 'Sum');
-          
-    
-          
-          data.addRow(['|',  0,  0, 0, 0]);
-          
-        var i = 1;
-        while(i < 200){
-            data.addRow(['|',  1.1*Math.sin(2*Math.PI*(i/scale)*freq),   1.1*Math.sin(2*Math.PI*(i/scale)*freq2),    1.1*Math.sin(2*Math.PI*(i/scale)*freq3), 1.1*Math.sin(2*Math.PI*(i/scale)*freq) + 1.1*Math.sin(2*Math.PI*(i/scale)*freq2) + 1.1*Math.sin(2*Math.PI*(i/scale)*freq3)]);
-            i++;
-        }
-          
-           
-        var options = {
-          title: 'Tone Waves',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
+Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+large language ocean. A small river named Duden flows by their place and
+supplies it with the necessary regelialia. It is a paradisematic country, in
+which roasted parts of sentences fly into your mouth.
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+Even the all-powerful Pointing has no control about the blind texts it is an
+almost unorthographic life One day however a small line of blind text by the
+name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
+advised her not to do so, because there were thousands of bad Commas, wild
+Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
 
-        chart.draw(data, options);
-      }
-    </script>
-</head>
+##### Wherever far wow thus a squirrel raccoon jeez jaguar this from along
 
-<body>
-    <!-- Side navigation -->
-<div class="sidenav">
-  <a href="#">Tone Generation</a>
-  <a href="#">Data Analysis</a>
-  
-</div>
+She packed her seven versalia, put her initial into the belt and made herself on
+the way. When she reached the first hills of the Italic Mountains, she had a
+last view back on the skyline of her hometown Bookmarksgrove, the headline of
+Alphabet Village and the subline of her own road, the Line Lane. Pityful a
+rethoric question ran over her cheek, then she continued her way. On her way she
+met a copy.
 
-<!-- Page content -->
-<div class="main">
-  ...
-</div>
-    
-    
-    
-    <div id="negrouse" align="center"><input id="toggle" type="button" value="Play" onclick="toggle()"/ ></div>
-    <div id="controls">
-  <div id="audioControls">
-    <input class="frequency" id="freqText" type="text" value="75" onchange="updateFreq(this.value); drawChart(freq)"/>
-    <div class="adjustments">
-    <input class="butt" type="button" value="-1 octave" onclick="updateFreq(freq / 2)"/>
-    <input class="butt" type="button" value="-1 half-step" onclick="updateFreq(freq / STEP_CONSTANT)"/>
-    <input class="butt" type="button" value="+1 half-step" onclick="updateFreq(-freq * STEP_CONSTANT)"/>
-    <input class="butt" type="button" value="+1 octave" onclick="updateFreq(freq * 2)"/>
-    <br>
-    
-    <input id="freqRange" type="range" min="0" max="1760" value="75" oninput="updateFreq(this.value); drawChart(freq)"/>
-    </div>
-    <br>
-    </div>
-  
-<div id="audioControls2">
-    <input class="frequency" id="freqText2" type="text" value="50" onchange="updateFreq2(this.value); drawChart(freq2)"/>
-    <div class="adjustments">
-    <input class="butt" type="button" value="-1 octave" onclick="updateFreq2(freq2 / 2)"/>
-    <input class="butt" type="button" value="-1 half-step" onclick="updateFreq2(freq2 / STEP_CONSTANT2)"/>
-    <input class="butt" type="button" value="+1 half-step" onclick="updateFreq2(freq2 * STEP_CONSTANT2)"/>
-    <input class="butt" type="button" value="+1 octave" onclick="updateFreq2(freq2 * 2)"/>
-    
-    <br>
+###### Slapped cozy a that lightheartedly and far
 
-    <input id="freqRange2" type="range" min="0" max="1760" value="50" oninput="updateFreq2(this.value); drawChart(freq2)"/>
-    </div>
-    <br>
-
-  </div>
-<div id="audioControls3">
-    <input class="frequency" id="freqText3" type="text" value="25" onchange="updateFreq3(this.value); drawChart(freq3)"/>
-    <div class="adjustments">
-    <input class="butt" type="button" value="-1 octave" onclick="updateFreq3(freq3 / 2)"/>
-    <input class="butt" type="button" value="-1 half-step" onclick="updateFreq3(freq3 / STEP_CONSTANT3)"/>
-    <input class="butt" type="button" value="+1 half-step" onclick="updateFreq3(freq3 * STEP_CONSTANT3)"/>
-    <input class="butt" type="button" value="+1 octave" onclick="updateFreq3(freq3 * 2)"/>
-    <br>
-    
-    <input id="freqRange3" type="range" min="0" max="1760" value="25" oninput="updateFreq3(this.value); drawChart(freq3)"/>
-    </div>
-    
-    <br>
-    
-    </div>
-  
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>         
-    
+The copy warned the Little Blind Text, that where it came from it would have
+been rewritten a thousand times and everything that was left from its origin
+would be the word "and" and the Little Blind Text should turn around and return
+to its own, safe country. But nothing the copy said could convince her and so it
+didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
+with Longe and Parole and dragged her into their agency, where they abused her
+for their projects again and again.
