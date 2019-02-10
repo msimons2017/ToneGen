@@ -141,7 +141,14 @@ google.charts.load('current', {'packages':['corechart']});
         var options = {
           title: 'Tone Waves',
           curveType: 'function',
-          legend: { position: 'bottom' }
+          legend: { position: 'bottom' },
+            series: {
+            0: { color: '#041E42' },
+            1: { color: '#807E7F' },
+            2: { color: '#231F20' },
+            3: { color: '#1560FB' },
+            
+          }
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
