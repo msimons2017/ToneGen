@@ -18,22 +18,22 @@
 /* The about link: 20px from the top with a green background */
 #ToneGen {
   top: 20px;
-  background-color: #4CAF50;
+  background-color: #041E42;
 }
 
 #DataAn {
   top: 80px;
-  background-color: #2196F3; /* Blue */
+  background-color: #231F20; /* Blue */
 }
 
 #projects {
   top: 140px;
-  background-color: #f44336; /* Red */
+  background-color: #807E7F; /* Red */
 }
 
 #contact {
   top: 200px;
-  background-color: #555 /* Light Black */
+  background-color: #1560FB /* Light Black */
 }
     #toggle {
     text-decoration:none;
