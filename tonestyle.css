@@ -18,7 +18,7 @@
 /* The about link: 20px from the top with a green background */
 #ToneGen {
   top: 20px;
-  background-color: #041E42;
+  background-color: #1560FB;
 }
 
 #DataAn {
@@ -33,7 +33,7 @@
 
 #contact {
   top: 200px;
-  background-color: #1560FB /* Light Black */
+  background-color: #041E42 /* Light Black */
 }
     #toggle {
     text-decoration:none;
