@@ -16,12 +16,12 @@
 }
 
 /* The about link: 20px from the top with a green background */
-#about {
+#ToneGen {
   top: 20px;
   background-color: #4CAF50;
 }
 
-#blog {
+#DataAn {
   top: 80px;
   background-color: #2196F3; /* Blue */
 }
