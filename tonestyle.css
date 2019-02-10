@@ -4,7 +4,7 @@
   left: -140px; /* Position them outside of the screen */
   transition: 0.3s; /* Add transition on hover */
   padding: 15px; /* 15px padding */
-  width: 160px; /* Set a specific width */
+  width: 140px; /* Set a specific width */
   text-decoration: none; /* Remove underline */
   font-size: 20px; /* Increase font size */
   color: white; /* White text color */
