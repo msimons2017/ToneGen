@@ -155,27 +155,3 @@ google.charts.load('current', {'packages':['corechart']});
 
         chart.draw(data, options);
       }
-
-
-
-
-$(function() {
-
-    var $sidebar   = $("#mySidenav"),
-        $window    = $(window),
-        offset     = $mySidenav.offset(),
-        topPadding = 15;
-
-    $window.scroll(function() {
-        if ($window.scrollTop() > offset.top) {
-            $mySidenav.stop().animate({
-                marginTop: $window.scrollTop() - offset.top + topPadding
-            });
-        } else {
-            $mySidenav.stop().animate({
-                marginTop: 0
-            });
-        }
-    });
-
-});
