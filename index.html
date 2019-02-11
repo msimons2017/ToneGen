@@ -31,9 +31,11 @@
     <input class="butt" type="button" value="+1 half-step" onclick="updateFreq(-freq * STEP_CONSTANT)"/>
     <input class="butt" type="button" value="+1 octave" onclick="updateFreq(freq * 2)"/>
     <br>
-    
-    <input id="freqRange" type="range" min="0" max="1760" value="75" oninput="updateFreq(this.value); drawChart(freq)"/>
-    </div>
+   
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  </div>
+   </div>
     <br>
     </div>
   
