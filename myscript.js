@@ -117,7 +117,7 @@ google.charts.load('current', {'packages':['corechart']});
 
 
       function drawChart() {
-        var scale = (100*freq);
+        var scale = (50*freq);
         var step = 1;
 
         var data = google.visualization.arrayToDataTable([]);
@@ -132,7 +132,7 @@ google.charts.load('current', {'packages':['corechart']});
           data.addRow(['|',  0,  0, 0, 0]);
 
         var i = 1;
-        while(i < 1000){
+        while(i < 500){
             data.addRow(['|',  1.1*Math.sin(2*Math.PI*(i/scale)*freq),   1.1*Math.sin(2*Math.PI*(i/scale)*freq2),    1.1*Math.sin(2*Math.PI*(i/scale)*freq3), 1.1*Math.sin(2*Math.PI*(i/scale)*freq) + 1.1*Math.sin(2*Math.PI*(i/scale)*freq2) + 1.1*Math.sin(2*Math.PI*(i/scale)*freq3)]);
             i++;
         }
