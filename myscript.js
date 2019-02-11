@@ -10,17 +10,17 @@ if (typeof AudioContext !== 'undefined') {
 
 var playing = false;
 var osc = null;
-var freq = 75;
+var freq = 100;
 var STEP_CONSTANT = Math.pow(2.0, 1.0/12.0);
 //second set of variables
 var playing2 = false;
 var osc2 = null;
-var freq2 = 50;
+var freq2 = 200;
 var STEP_CONSTANT2 = Math.pow(2.0, 1.0/12.0);
 //third set of variables
 var playing3 = false;
 var osc3 = null;
-var freq3 = 25;
+var freq3 = 300;
 var STEP_CONSTANT3 = Math.pow(2.0, 1.0/12.0);
 
 
@@ -62,7 +62,7 @@ function toggle() {
     osc3.start(0);
     button.value = "Stop";
   }
-    
+
 }
 
 function updateFreq(newFreq) {
@@ -78,7 +78,7 @@ window.onload = function() {
   if (!usingWebAudio) {
     document.getElementById("audioControls").innerHTML = "<p>Web audio required.</p>"
   }
-    
+
 }
 
 function updateFreq2(newFreq2) {
@@ -94,7 +94,7 @@ window.onload = function() {
   if (!usingWebAudio) {
     document.getElementById("audioControls2").innerHTML = "<p>Web audio required.</p>"
   }
-    
+
 }
 function updateFreq3(newFreq3) {
   freq3 = newFreq3;
@@ -109,35 +109,35 @@ window.onload = function() {
   if (!usingWebAudio) {
     document.getElementById("audioControls3").innerHTML = "<p>Web audio required.</p>"
   }
-    
+
 }
 google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-        
-     
-        
+
+
+
       function drawChart() {
         var scale = (100*freq);
         var step = 1;
-        
+
         var data = google.visualization.arrayToDataTable([]);
           data.addColumn('string', '');
           data.addColumn('number', 'Tone 1');
           data.addColumn('number', 'Tone 2');
           data.addColumn('number', 'Tone 3');
           data.addColumn('number', 'Sum');
-          
-    
-          
+
+
+
           data.addRow(['|',  0,  0, 0, 0]);
-          
+
         var i = 1;
         while(i < 1000){
             data.addRow(['|',  1.1*Math.sin(2*Math.PI*(i/scale)*freq),   1.1*Math.sin(2*Math.PI*(i/scale)*freq2),    1.1*Math.sin(2*Math.PI*(i/scale)*freq3), 1.1*Math.sin(2*Math.PI*(i/scale)*freq) + 1.1*Math.sin(2*Math.PI*(i/scale)*freq2) + 1.1*Math.sin(2*Math.PI*(i/scale)*freq3)]);
             i++;
         }
-          
-           
+
+
         var options = {
           title: 'Tone Waves',
           curveType: 'function',
@@ -147,7 +147,7 @@ google.charts.load('current', {'packages':['corechart']});
             1: { color: '#807E7F' },
             2: { color: '#231F20' },
             3: { color: '#1560FB' },
-            
+
           }
         };
 

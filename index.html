@@ -18,62 +18,61 @@
   <a href="#" id="projects">Projects</a>
   <a href="#" id="contact">Contact</a>
 </div>
-    
+
 <!-- Page content -->
-    
+
     <div id="negrouse" align="center"><input id="toggle" type="button" value="Play" onclick="toggle()"/ ></div>
     <div id="controls">
   <div id="audioControls">
-    <input class="frequency" id="freqText" type="text" value="75" onchange="updateFreq(this.value); drawChart(freq)"/>  
+    <input class="frequency" id="freqText" type="text" value="100" onchange="updateFreq(this.value); drawChart(freq)"/>
     <div class="adjustments">
     <input class="butt" type="button" value="-1 octave" onclick="updateFreq(freq / 2)"/>
     <input class="butt" type="button" value="-1 half-step" onclik="updateFreq(freq / STEP_CONSTANT)"/>
     <input class="butt" type="button" value="+1 half-step" onclick="updateFreq(-freq * STEP_CONSTANT)"/>
     <input class="butt" type="button" value="+1 octave" onclick="updateFreq(freq * 2)"/>
     <br>
-   
+
     <div class="slidecontainer">
-      <input type="range" min="0" max="2000" value="75" class="slider" id="freqRange" oninput="updateFreq(this.value); drawChart(freq)"/>
+      <input type="range" min="0" max="2000" value="100" class="slider" id="freqRange" oninput="updateFreq(this.value); drawChart(freq)"/>
   </div>
    </div>
     <br>
     </div>
-  
+
 <div id="audioControls2">
-    <input class="frequency" id="freqText2" type="text" value="50" onchange="updateFreq2(this.value); drawChart(freq2)"/>
+    <input class="frequency" id="freqText2" type="text" value="200" onchange="updateFreq2(this.value); drawChart(freq2)"/>
     <div class="adjustments">
     <input class="butt" type="button" value="-1 octave" onclick="updateFreq2(freq2 / 2)"/>
     <input class="butt" type="button" value="-1 half-step" onclick="updateFreq2(freq2 / STEP_CONSTANT2)"/>
     <input class="butt" type="button" value="+1 half-step" onclick="updateFreq2(freq2 * STEP_CONSTANT2)"/>
     <input class="butt" type="button" value="+1 octave" onclick="updateFreq2(freq2 * 2)"/>
-    
+
     <br>
 
     <div class="slidecontainer1">
-      <input type="range" min="0" max="2000" value="50" class="slider" id="freqRange2" oninput="updateFreq2(this.value); drawChart(freq2)"/>
+      <input type="range" min="0" max="2000" value="200" class="slider" id="freqRange2" oninput="updateFreq2(this.value); drawChart(freq2)"/>
   </div>
  </div>
     <br>
 
   </div>
 <div id="audioControls3">
-    <input class="frequency" id="freqText3" type="text" value="25" onchange="updateFreq3(this.value); drawChart(freq3)"/>
+    <input class="frequency" id="freqText3" type="text" value="300" onchange="updateFreq3(this.value); drawChart(freq3)"/>
     <div class="adjustments">
     <input class="butt" type="button" value="-1 octave" onclick="updateFreq3(freq3 / 2)"/>
     <input class="butt" type="button" value="-1 half-step" onclick="updateFreq3(freq3 / STEP_CONSTANT3)"/>
     <input class="butt" type="button" value="+1 half-step" onclick="updateFreq3(freq3 * STEP_CONSTANT3)"/>
     <input class="butt" type="button" value="+1 octave" onclick="updateFreq3(freq3 * 2)"/>
     <br>
-    
+
     <div class="slidecontainer2">
-      <input type="range" min="0" max="2000" value="25" class="slider" id="freqRange3" oninput="updateFreq3(this.value); drawChart(freq3)"/>
+      <input type="range" min="0" max="2000" value="300" class="slider" id="freqRange3" oninput="updateFreq3(this.value); drawChart(freq3)"/>
   </div>
 </div>
-    
+
     <br>
-    
+
     </div>
     </div>
-  
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>         
-    
+
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
