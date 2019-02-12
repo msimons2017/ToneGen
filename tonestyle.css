@@ -1,4 +1,7 @@
 
+#mySidenav {
+    position:fixed;
+}
 #mySidenav a {
   position: absolute; /* Position them relative to the browser window */
   left: -140px; /* Position them outside of the screen */
