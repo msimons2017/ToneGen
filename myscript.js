@@ -1,4 +1,5 @@
 var context = null;
+
 var usingWebAudio = true;
 if (typeof AudioContext !== 'undefined') {
   context = new AudioContext();
@@ -117,7 +118,7 @@ google.charts.load('current', {'packages':['corechart']});
 
 
       function drawChart() {
-        var scale = (50*freq);
+        var scale = (250*freq);
         var step = 1;
 
         var data = google.visualization.arrayToDataTable([]);
